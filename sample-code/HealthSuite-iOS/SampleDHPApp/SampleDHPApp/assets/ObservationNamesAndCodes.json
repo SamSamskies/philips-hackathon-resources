@@ -1,0 +1,77 @@
+ [
+  {
+  "name": "All",
+  "code": "",
+  "fullname": "All"
+  },
+   {
+      "name": "Weight",
+      "code": "3141-9",
+      "fullname": "Body weight measured"
+   },
+   {
+      "name": "Blood Pressure",
+      "code": "55284-4",
+      "fullname": "Blood pressure systolic & diastolic"
+   },
+   {
+      "name": "Systolic Blood Pressure",
+      "code": "8480-6",
+      "fullname": "Systolic blood pressure"
+   },
+   {
+      "name": "Diastolic Blood Pressure",
+      "code": "8462-4",
+      "fullname": "Diastolic blood pressure"
+   },
+   {
+      "name": "Mean Blood Pressure",
+      "code": "8478-0",
+      "fullname": "Mean blood pressure"
+   },
+   {
+      "name": "Steps",
+      "code": "41950-7",
+      "fullname": "Number of steps in 24 hour Measured"
+   },
+   {
+      "name": "Glucose",
+      "code": "2339-0",
+      "fullname": "Glucose [Mass/volume] in Blood"
+   },
+   {
+      "name": "Body Temperature",
+      "code": "8310-5",
+      "fullname": "Body temperature"
+   },
+   {
+      "name": "Mood",
+      "code": "52497-5",
+      "fullname": "Mood"
+   },
+   {
+      "name": "Glycated Hemoglobin",
+      "code": "4548-4",
+      "fullname": "Hemoglobin A1c/Hemoglobin.total in Blood"
+   },
+   {
+      "name": "Prothrombin Time",
+      "code": "5902-2",
+      "fullname": "Prothrombin time (PT)"
+   },
+   {
+      "name": "Pulse Rate (blood pressure)",
+      "code": "8867-4",
+      "fullname": "Heart rate"
+   },
+   {
+      "name": "Pulse Rate (oximeter)",
+      "code": "8889-8",
+      "fullname": "Heart rate by Pulse oximetry"
+   },
+   {
+      "name": "SPO2",
+      "code": "59408-5",
+      "fullname": "Oxygen saturation in Arterial blood by Pulse oximetry"
+   }
+]

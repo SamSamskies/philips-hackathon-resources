@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC7-Jd-d2u">
+                                <rect key="frame" x="242" y="160" width="117" height="30"/>
+                                <state key="normal" title="Get Token">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getToken:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GkI-01-fUm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUA-bt-uk9">
+                                <rect key="frame" x="200" y="218" width="200" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Cw-eJ-pNr">
+                                <rect key="frame" x="242" y="309" width="117" height="30"/>
+                                <state key="normal" title="Say Hello World">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="gtHelloWorld:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Sqz-6P-8jr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2A-pc-xhD">
+                                <rect key="frame" x="200" y="364" width="200" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="philipsHealthCareLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="JGd-S4-UKk">
+                                <rect key="frame" x="265" y="37" width="70" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Wg0-61-g9L"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="yC7-Jd-d2u" secondAttribute="centerX" id="9Hx-fj-rwa"/>
+                            <constraint firstAttribute="centerX" secondItem="6Cw-eJ-pNr" secondAttribute="centerX" id="OV6-QQ-Dag"/>
+                            <constraint firstAttribute="centerX" secondItem="y2A-pc-xhD" secondAttribute="centerX" id="Pnl-bW-JDN"/>
+                            <constraint firstAttribute="centerX" secondItem="iUA-bt-uk9" secondAttribute="centerX" id="YUV-7B-W1t"/>
+                            <constraint firstItem="y2A-pc-xhD" firstAttribute="top" secondItem="6Cw-eJ-pNr" secondAttribute="bottom" constant="20" id="l1F-Ub-FM0"/>
+                            <constraint firstItem="iUA-bt-uk9" firstAttribute="bottom" secondItem="6Cw-eJ-pNr" secondAttribute="top" constant="20" id="q1N-SY-OfG"/>
+                            <constraint firstItem="yC7-Jd-d2u" firstAttribute="bottom" secondItem="iUA-bt-uk9" secondAttribute="top" constant="20" id="u8m-SU-q6L"/>
+                            <constraint firstAttribute="centerX" secondItem="JGd-S4-UKk" secondAttribute="centerX" id="w5r-Gh-qrq"/>
+                            <constraint firstItem="JGd-S4-UKk" firstAttribute="bottom" secondItem="yC7-Jd-d2u" secondAttribute="top" constant="30" id="yQg-w4-XcU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getHelloWorldButton" destination="6Cw-eJ-pNr" id="BJ4-NW-sqg"/>
+                        <outlet property="helloWorldTextView" destination="y2A-pc-xhD" id="5Sb-BM-1gR"/>
+                        <outlet property="tokenTextView" destination="iUA-bt-uk9" id="jWK-I0-voS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="philipsHealthCareLogo.png" width="143" height="189"/>
+    </resources>
+</document>

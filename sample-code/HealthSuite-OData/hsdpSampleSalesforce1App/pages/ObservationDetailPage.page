@@ -1,0 +1,41 @@
+<apex:page controller="ObservationDetailController" tabStyle="Observations__x">
+    <apex:sectionHeader title="Observation" subtitle="{!observation.id__c}" />
+     
+    <apex:pageBlock mode="maindetail">      
+        <apex:pageBlockSection title="Observation Details" columns="1">
+            <apex:outputField value="{!observation.id__c}" />         
+            <apex:pageBlockSectionItem rendered="{!NOT(ISNULL(observationWrapper.displayName))}">
+                <apex:outputLabel value="Type" for="theName" />
+                <apex:outputText id="theName" value="{!observationWrapper.displayName}" />         
+            </apex:pageBlockSectionItem>             
+            <apex:outputField value="{!observation.patientId__c}" />  
+            <apex:pageBlockSectionItem rendered="{!NOT(ISNULL(observationWrapper.appliesPeriod))}">
+                <apex:outputLabel value="Applies Period" for="thePrd" />
+                <apex:outputText id="thePrd" value="{!observationWrapper.appliesPeriod}" />         
+            </apex:pageBlockSectionItem>            
+            <apex:pageBlockSectionItem rendered="{!NOT(ISNULL(observationWrapper.quantity))}">
+                <apex:outputLabel value="Quantity" for="theQty" />
+                <apex:outputText id="theQty" value="{!observationWrapper.quantity}" />         
+            </apex:pageBlockSectionItem>                 
+            <apex:outputField value="{!observation.reliability__c}" />   
+            <apex:outputField value="{!observation.status__c}" />                      
+        </apex:pageBlockSection>  
+        <apex:pageBlockSection title="Related Observations" id="roBlock" columns="1" rendered="{!NOT(ISNULL(relatedObservations))}">
+            <apex:pageBlockTable value="{!relatedObservations}" var="item">
+                <apex:column headerValue="Observation ID">
+                    <apex:outputLink value="/apex/ObservationDetailPage?externalId={!item.observationId}" 
+                              id="childLink"><apex:outputText value="{!item.observationId}" /></apex:outputLink>
+                </apex:column>                  
+                <apex:column headerValue="Type">
+                    <apex:outputText value="{!item.displayName}" />
+                </apex:column>
+                <apex:column headerValue="Applies Period">
+                    <apex:outputText value="{!item.appliesPeriod}" />
+                </apex:column>                
+                <apex:column headerValue="Quantity">
+                    <apex:outputText value="{!item.quantity}" />
+                </apex:column>                 
+            </apex:pageBlockTable> 
+        </apex:pageBlockSection> 
+    </apex:pageBlock>  
+</apex:page>

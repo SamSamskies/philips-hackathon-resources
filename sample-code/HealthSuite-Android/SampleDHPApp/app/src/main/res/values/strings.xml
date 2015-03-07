@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SampleMobileDHP</string>
+    <string name="button_refresh_list">Refresh List Info</string>
+    <string name="button_refresh">Refresh Person Info</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_display_patient">DisplayPatientActivity</string>
+    <string name="title_activity_patient_info">Patient info</string>
+    <string name="title_activity_login">Login</string>
+
+
+    <string-array name="observationTypeName">
+        <item>All</item>
+        <item>Weight</item>
+        <item>Blood Pressure</item>
+        <item>Systolic Blood Pressure</item>
+        <item>Diastolic Blood Pressure</item>
+        <item>Mean Blood Pressure</item>
+        <item>Steps</item>
+        <item>Glucose</item>
+        <item>Body Temperature</item>
+        <item>Mood</item>
+        <item>Glycated Hemoglobin</item>
+        <item>Prothrombin Time</item>
+        <item>Pulse Rate (blood pressure)</item>
+        <item>Pulse Rate (oximeter)</item>
+        <item>SPO2</item>
+    </string-array>
+
+    <string-array name="observationTypeCode">
+        <item></item>
+        <item>3141-9</item>
+        <item>55284-4</item>
+        <item>8480-6</item>
+        <item>8462-4</item>
+        <item>8478-0</item>
+        <item>41950-7</item>
+        <item>2339-0</item>
+        <item>8310-5</item>
+        <item>52497-5</item>
+        <item>4548-4</item>
+        <item>5902-2</item>
+        <item>8867-4</item>
+        <item>8889-8</item>
+        <item>59408-5</item>
+    </string-array>
+
+    <string-array name="observationTypeFullName">
+        <item>All</item>
+        <item>Body weight measured</item>
+        <item>Blood pressure systolic &amp; diastolic</item>
+        <item>Systolic blood pressure</item>
+        <item>Diastolic blood pressure</item>
+        <item>Mean blood pressure</item>
+        <item>Number of steps in 24 hour Measured</item>
+        <item>Glucose [Mass/volume] in Blood</item>
+        <item>Body temperature</item>
+        <item>Mood</item>
+        <item>Hemoglobin A1c/Hemoglobin.total in Blood</item>
+        <item>Prothrombin time (PT)</item>
+        <item>Heart rate</item>
+        <item>Heart rate by Pulse oximetry</item>
+        <item>Oxygen saturation in Arterial blood by Pulse oximetry</item>
+    </string-array>
+
+</resources>

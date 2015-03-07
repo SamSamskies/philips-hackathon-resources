@@ -1,0 +1,68 @@
+<apex:page controller="PatientDetailController" tabStyle="Patients__x" docType="html-5.0">
+    <apex:sectionHeader title="Patient" subtitle="{!patient.id__c}" />
+
+    <apex:form >    
+        <apex:pageBlock mode="maindetail">      
+            <apex:pageBlockSection title="Patient Detail" columns="2">
+                <apex:outputField value="{!patient.active__c}" />
+                <apex:outputField value="{!patient.address__c}" />   
+                <apex:outputField value="{!patient.id__c}" />   
+                <apex:outputField value="{!patient.city__c}" />          
+                <apex:outputField value="{!patient.healthsuite_identifier__c}" />
+                <apex:outputField value="{!patient.state__c}" />            
+                <apex:outputField value="{!patient.given__c}" /> 
+                <apex:outputField value="{!patient.zip__c}" /> 
+                <apex:outputField value="{!patient.family__c}" /> 
+                <apex:outputField value="{!patient.country__c}" /> 
+                <apex:outputField value="{!patient.gender__c}" />   
+                <apex:outputField value="{!patient.phone__c}" />          
+                <apex:outputField value="{!patient.birthdate__c}" />     
+                <apex:outputField value="{!patient.email__c}" />        
+                <apex:outputField value="{!patient.maritalStatus__c}" />             
+            </apex:pageBlockSection>  
+        </apex:pageBlock>         
+
+        <apex:pageBlock mode="detail" id="obsvBlock" tabStyle="Observations__x"> 
+            <apex:facet name="header">
+                <apex:outputPanel >
+                    <apex:outputLabel value="Observation Type Filter:" for="observationTypes" />
+                    &nbsp;
+                    <apex:selectList id="observationTypes" value="{!obvFilterType}" size="1" title="Genre">
+                        <apex:selectOptions value="{!observationTypes}" />
+                    </apex:selectList>                 
+                    &nbsp;   
+                    <apex:commandButton action="{!Filter}" value="Filter" reRender="obsvBlock" />
+                    &nbsp;
+                    <apex:commandButton action="{!ClearFilter}" value="Reset Filter" reRender="obsvBlock" />
+                </apex:outputPanel>
+            </apex:facet>            
+
+            <apex:pageBlockSection title="Observations" columns="1" rendered="{!NOT(ISNULL(relatedObservations))}">
+                <apex:pageBlockTable value="{!relatedObservations}" var="item">
+                    <apex:column headerValue="Observation ID">
+                        <apex:outputLink value="/apex/ObservationDetailPage?externalId={!item.observationId}" 
+                                  id="childLink"><apex:outputText value="{!item.observationId}" /></apex:outputLink>
+                    </apex:column>                  
+                    <apex:column headerValue="Type">
+                        <apex:outputText value="{!item.displayName}" />
+                    </apex:column>
+                    <apex:column headerValue="Applies Period">
+                        <apex:outputText value="{!item.appliesPeriod}" />
+                    </apex:column>                
+                    <apex:column headerValue="Quantity">
+                        <apex:outputText value="{!item.quantity}" />
+                    </apex:column>                 
+                </apex:pageBlockTable>
+
+                <apex:outputPanel layout="block" style="text-align:center">
+                    <apex:commandLink action="{!Previous}" value="< Previous Page" 
+                            id="prevCommandLink" rendered="{!showPrev}" reRender="obsvBlock" />
+                    &nbsp;&nbsp;                    
+                    <apex:commandLink action="{!Next}" value="Next Page >" 
+                            id="nextCommandLink" rendered="{!showNext}" reRender="obsvBlock" />
+                </apex:outputPanel>
+
+            </apex:pageBlockSection>
+        </apex:pageBlock>  
+    </apex:form>
+</apex:page>

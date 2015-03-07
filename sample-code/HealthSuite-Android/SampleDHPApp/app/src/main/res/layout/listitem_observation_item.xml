@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <TextView
+        android:id="@+id/observationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/observationValue"
+        android:ellipsize="end"
+        style="@style/rowHeaderText"/>
+
+    <TextView
+        android:id="@+id/observationValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:textSize="16dp"
+        style="@style/rowHeaderText"
+        android:gravity="center_vertical"/>
+
+    <LinearLayout
+        android:id="@+id/observationStatusReliability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/observationName"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STATUS: "
+            android:gravity="center_vertical"
+            style="@style/rowSubHeaderTitleText"/>
+        <TextView
+            android:id="@+id/observationStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center_vertical"
+            style="@style/rowSubHeaderText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="REL: "
+            android:gravity="center_vertical"
+            style="@style/rowSubHeaderTitleText"/>
+        <TextView
+            android:id="@+id/observationReliability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center_vertical"
+            style="@style/rowSubHeaderText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/observationDates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/observationStatusReliability"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="DATE: "
+            android:gravity="center_vertical"
+            style="@style/rowSubHeaderTitleText"/>
+        <TextView
+            android:id="@+id/observationDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/observationStatusReliability"
+            android:textSize="12dp"
+            android:gravity="center_vertical|end"
+            style="@style/rowSubHeaderText"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

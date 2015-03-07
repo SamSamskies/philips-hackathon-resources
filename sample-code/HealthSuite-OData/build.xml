@@ -1,0 +1,15 @@
+<project name="Sample usage of Salesforce Ant tasks" default="describeMetadata" basedir="." xmlns:sf="antlib:com.salesforce">
+    <property file="build.properties" />
+    <property environment="env" />
+
+    <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
+        <classpath>
+            <pathelement location="../ant-salesforce33.jar" />
+        </classpath>
+    </taskdef>
+
+    <!-- Deploy the unpackaged set of metadata retrieved with retrieveUnpackaged -->
+    <target name="deployUnpackaged">
+      <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="hsdpSampleSalesforce1App" rollbackOnError="true" />
+    </target>	
+</project>

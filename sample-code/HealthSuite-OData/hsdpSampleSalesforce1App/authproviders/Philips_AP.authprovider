@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://gateway.api.pcftest.com:9004/v1/oauth/code</authorizeUrl>
+    <consumerKey>I2kUbU2v1TMUbR2QAiU9FB8TcK4w8j9c</consumerKey>
+    <consumerSecret>+Qkq7GpRpR/qOyUMErwqY3BBGPdiC2rX</consumerSecret>
+    <friendlyName>Philips AP</friendlyName>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <providerType>OpenIdConnect</providerType>
+    <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <tokenUrl>https://gateway.api.pcftest.com:9004/v1/oauth/token</tokenUrl>
+</AuthProvider>

@@ -1,0 +1,18 @@
+<apex:page standardController="Patients__x" recordSetVar="patients" tabStyle="Patients__x">
+  <apex:sectionHeader title="Patients" subtitle="Home" />
+
+  <apex:pageBlock >
+    <apex:pageBlockTable value="{!patients}" var="p">
+      <apex:column headerValue="Patient ID">
+        <apex:outputLink value="/apex/PatientDetailPage?externalId={!p.id__c}" 
+                         id="itemLink"><apex:outputText value="{!p.id__c}" /></apex:outputLink>
+      </apex:column>    
+      <apex:column value="{!p.family__c}" />
+      <apex:column value="{!p.given__c}" />
+      <apex:column value="{!p.birthdate__c}" />
+      <apex:column value="{!p.healthsuite_identifier__c}" />
+      <apex:column value="{!p.city__c}" />
+      <apex:column value="{!p.state__c}" />
+    </apex:pageBlockTable>
+  </apex:pageBlock>
+</apex:page>

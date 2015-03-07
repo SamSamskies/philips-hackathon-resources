@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HelloWorld</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="tokenExistsString">Token already exists</string>
+    <string name="tokenReceivedString">Token Received\n</string>
+    <string name="tokenRequestError">Check Client credentials or maybe network issue, token could not be retrieved.</string>
+    <string name="tokenExpOrNetworkConnectionIssue">Check n/w connection or token expired</string>
+</resources>
